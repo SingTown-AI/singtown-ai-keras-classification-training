@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t --platform linux/amd64 singtown-registry.cn-shenzhen.cr.aliyuncs.com/singtown-ai/singtown-ai-keras-classification:${{ env.TIMESTAMP }} .
+        run: docker build --platform linux/amd64 -t singtown-registry.cn-shenzhen.cr.aliyuncs.com/singtown-ai/singtown-ai-keras-classification:${{ env.TIMESTAMP }} .
 
       - name: Log in to ACR
         uses: docker/login-action@v2
