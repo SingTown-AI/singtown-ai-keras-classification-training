@@ -2,3 +2,4 @@
 resource
 *.keras
 *.tflite
+.vscode

@@ -1,6 +1,6 @@
-from nvcr.io/nvidia/tensorflow:25.01-tf2-py3
+from tensorflow/tensorflow:2.19.0-gpu
 
-RUN pip install keras singtown-ai
+RUN pip install keras singtown-ai==0.4.3
 
 COPY . .
 

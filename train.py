@@ -41,7 +41,7 @@ def data_augmentation(images):
 
 def load_training_data():
     train_ds, val_ds = keras.utils.image_dataset_from_directory(
-        "dataset",
+        "resource",
         validation_split=0.2,
         subset="both",
         seed=1337,
@@ -49,7 +49,7 @@ def load_training_data():
         image_size=(IMG_H, IMG_W),
         batch_size=BATCH_SIZE,
         label_mode="categorical",
-        class_names=["dog", "cat"],
+        class_names=LABELS,
     )
     train_ds = train_ds.map(
         lambda img, label: (data_augmentation(img) / 127.5 - 1, label),
