@@ -1,5 +1,4 @@
 *.csv
-resource
 *.keras
 *.tflite
 .vscode
