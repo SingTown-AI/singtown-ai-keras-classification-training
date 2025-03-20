@@ -1,0 +1,25 @@
+{
+  "id": 1,
+  "cmd": [
+      "python",
+      "-u",
+      "train.py",
+      "--model",
+      "MobileNetV2",
+      "--weight",
+      "imagenet",
+      "--alpha",
+      "0.35",
+      "--imgw",
+      "96",
+      "--imgh",
+      "96",
+      "--labels",
+      "cat",
+      "dog",
+      "--epochs",
+      "20",
+      "--learning_rate",
+      "0.001"
+  ]
+}

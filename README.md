@@ -41,22 +41,14 @@
 - MobileNetV2 1.3 224
 - MobileNetV2 1.4 224
 
-## Support Deploys
-
-- LiteRT for Microcontrollers(tflite micro)
-
 ## Test
 
 ```
-# test server
-pip install singtown-ai-mock-server
-python -m singtown-ai-mock-server
+# test
+python -m singtown_ai.runner --task task.json
 
 # train
-python -m singtown_ai.runner --host http://127.0.0.1:8000 --task 6ba7b810-9dad-11d1-80b4-00c04fd430c8 --token 1234567890 --config singtown-ai-training.json
-
-# deploy
-python -m singtown_ai.runner --host http://127.0.0.1:8000 --task 68c01fc6-589f-4f56-a923-580bdad7e02d --token 1234567890
+python -m singtown_ai.runner --host http://127.0.0.1:8000 --task 6ba7b810-9dad-11d1-80b4-00c04fd430c8 --token 1234567890 --config singtown-ai.json
 ```
 
 ## Docker
@@ -66,8 +58,5 @@ docker build -t keras .
 
 # start test server first
 # train
-docker run -it --rm --network="host" --gpus all keras:latest python -m singtown_ai.runner --host http://127.0.0.1:8000 --task 6ba7b810-9dad-11d1-80b4-00c04fd430c8 --token 1234567890 --config singtown-ai-training.json
-
-# deploy
-docker run -it --rm --network="host" --gpus all keras:latest python -m singtown_ai.runner --host http://127.0.0.1:8000 --task 68c01fc6-589f-4f56-a923-580bdad7e02d --token 1234567890
+docker run -it --rm --network="host" --gpus all keras:latest python -m singtown_ai.runner --host http://127.0.0.1:8000 --task 6ba7b810-9dad-11d1-80b4-00c04fd430c8 --token 1234567890 --config singtown-ai.json
 ```
