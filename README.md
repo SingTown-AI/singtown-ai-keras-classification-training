@@ -56,7 +56,5 @@ python -m singtown_ai.runner --host http://127.0.0.1:8000 --task 6ba7b810-9dad-1
 ```
 docker build -t keras .
 
-# start test server first
-# train
 docker run -it --rm --network="host" --gpus all keras:latest python -m singtown_ai.runner --host http://127.0.0.1:8000 --task 6ba7b810-9dad-11d1-80b4-00c04fd430c8 --token 1234567890 --config singtown-ai.json
 ```
